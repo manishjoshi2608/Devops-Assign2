@@ -4,22 +4,22 @@ pipeline {
     stages {
         stage('Build ') {
             steps {
-                echo 'Hello This is Build'
+                echo 'Building is  in progress......'
             }
         }
     
     
         stage('test') {
             steps {
-                echo 'Hello this is test'
+                echo 'Testing .....'
             }
         }
     
     
         stage('deploy') {
             steps {
-                node hello
-                echo 'Hello this is deploy '
+                bat 'node hello'
+                echo 'Deploying....... '
             }
         }
     }
