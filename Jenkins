@@ -18,6 +18,7 @@ pipeline {
     
         stage('deploy') {
             steps {
+                node hello
                 echo 'Hello this is deploy '
             }
         }
