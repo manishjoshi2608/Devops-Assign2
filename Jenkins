@@ -4,24 +4,12 @@ pipeline {
     stages {
         stage('Build ') {
             steps {
-                echo 'Building is  in progress......'
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'First.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
             }
         }
     
     
-        stage('test') {
-            steps {
-                echo 'Testing .....'
-            }
-        }
-    
-    
-        stage('deploy') {
-            steps {
-                bat 'node hello'
-                echo 'Deploying....... '
-            }
-        }
+        
     }
     
 }
